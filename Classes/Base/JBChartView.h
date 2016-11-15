@@ -63,6 +63,8 @@ typedef NS_ENUM(NSInteger, JBChartViewState){
 
 @interface JBChartView : UIView
 
+@property id userData;
+
 /*
  * Base dataSource and delegate protocols.
  */
