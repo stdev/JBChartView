@@ -517,7 +517,12 @@ static UIColor *kJBBarChartViewDefaultBarColor = nil;
 		return [self availableHeight];
 	}
 	
-	return ((value - minHeight) / (maxHeight - minHeight)) * [self availableHeight];
+	CGFloat height = ((value - minHeight) / (maxHeight - minHeight)) * [self availableHeight];
+
+	if (height == 0)
+		height = 5;
+	
+	return height;
 }
 
 - (CGFloat)barWidth
